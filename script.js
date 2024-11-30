@@ -36,17 +36,41 @@ let questions = {
     ]
 };
 
-let turn = 1;
+
+let isOddTurn = true;
 
 document.getElementById("rollDice").addEventListener("click", () => {
-    let dice = turn % 2 === 0 ? "ganjil" : "genap";
-    let questionSet = dice === "ganjil" ? questions.odd : questions.even;
+    let diceResultDiv = document.getElementById("diceResult");
+    diceResultDiv.innerHTML = "🎲 Mengocok dadu...";
+    
+    // Simulate dice rolling animation
+    let counter = 0;
+    let diceInterval = setInterval(() => {
+        let randomNumber = Math.floor(Math.random() * 6) + 1;
+        diceResultDiv.innerHTML = `🎲 Angka: ${randomNumber}`;
+        counter++;
+        if (counter > 10) {
+            clearInterval(diceInterval);
+            determineDiceResult();
+        }
+    }, 100); // Update every 100ms
+});
+
+function determineDiceResult() {
+    let randomDice = Math.floor(Math.random() * 6) + 1;
+    let isEven = randomDice % 2 === 0;
+
+    // Assign question type based on random dice result
+    let diceType = isEven ? "genap" : "ganjil";
+    let questionSet = isEven ? questions.even : questions.odd;
     let question = questionSet[Math.floor(Math.random() * questionSet.length)];
 
-    document.getElementById("diceResult").innerText = `Angka ${dice}`;
+    document.getElementById("diceResult").innerText = `Angka ${randomDice} (${diceType})`;
     showQuestion(question);
-    turn++;
-});
+
+    // Alternate turn for fairness (optional)
+    isOddTurn = !isOddTurn;
+}
 
 function showQuestion(question) {
     document.getElementById("questionSection").style.display = "block";
@@ -56,7 +80,7 @@ function showQuestion(question) {
     buttons.forEach((button, index) => {
         button.innerText = question.options[index];
         button.dataset.correct = index === question.correct;
-        button.addEventListener("click", checkAnswer);
+        button.onclick = checkAnswer;
     });
 }
 
@@ -70,4 +94,10 @@ function checkAnswer(event) {
         resultDiv.className = "incorrect";
     }
     resultDiv.style.display = "block";
+
+    // Hide question section after 2 seconds
+    setTimeout(() => {
+        document.getElementById("questionSection").style.display = "none";
+        document.getElementById("result").style.display = "none";
+    }, 2000);
 }
