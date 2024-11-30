@@ -1,0 +1,59 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+#game {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#diceResult {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.correct {
+    color: green;
+    animation: confetti 2s;
+}
+
+.incorrect {
+    color: red;
+}
+
+@keyframes confetti {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
