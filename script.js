@@ -13,14 +13,14 @@ let questions = {
         },
         {
             text: "Berapa lama asisten praktikum bertugas?",
-            options: ["1 minggu", "1 bulan", "1 semester", "1 tahun"],
-            correct: 3
+            options: ["1 bulan", "1 semester", "1 tahun"],
+            correct: 2
         }
     ],
     even: [
         {
             text: "Berapa jumlah mata kuliah yang dipraktikumkan di prodi psikologi UII?",
-            options: ["3", "6", "5", "8"],
+            options: ["3", "6", "5"],
             correct: 1
         },
         {
