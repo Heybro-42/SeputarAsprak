@@ -8,13 +8,13 @@ let questions = {
         },
         {
             text: "Apa perbedaan antara tester dan testee?",
-            options: ["Tester melakukan pengujian", "Testee adalah peserta tes", "Tester adalah peserta tes","Testee melakukan pengujian"],
-            correct: 1, 2 
+            options: ["Tester melakukan pengujian", "Testee adalah peserta tes", "Keduanya benar"],
+            correct: 2
         },
         {
             text: "Berapa lama asisten praktikum bertugas?",
             options: ["1 bulan", "1 semester", "1 tahun"],
-            correct: 2
+            correct: 1
         }
     ],
     even: [
@@ -25,17 +25,16 @@ let questions = {
         },
         {
             text: "Apa tugas utama asisten praktikum?",
-            options: ["Arahan sesuai modul", "Penilaian mandiri", "Menggantikan dosen", "Membuat modul"],
-            correct: 1
+            options: ["Arahan sesuai modul", "Penilaian mandiri", "Menggantikan dosen"],
+            correct: 0
         },
         {
             text: "Dalam melaksanakan praktikum, asisten praktikum harus:",
-            options: ["Membuat kebijakan akademik", "Arahan sesuai modul", "Menilai mandiri", "Menilai objektif"],
-            correct: 2
+            options: ["Membuat kebijakan akademik", "Arahan sesuai modul", "Menilai mandiri"],
+            correct: 1
         }
     ]
 };
-
 
 let isOddTurn = true;
 
