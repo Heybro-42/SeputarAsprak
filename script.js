@@ -8,29 +8,29 @@ let questions = {
         },
         {
             text: "Apa perbedaan antara tester dan testee?",
-            options: ["Tester melakukan pengujian", "Testee adalah peserta tes", "Keduanya benar"],
-            correct: 2
+            options: ["Tester melakukan pengujian", "Testee adalah peserta tes", "Tester adalah peserta tes","Testee melakukan pengujian"],
+            correct: 1
         },
         {
             text: "Berapa lama asisten praktikum bertugas?",
-            options: ["1 bulan", "1 semester", "1 tahun"],
+            options: ["1 minggu", "1 bulan", "1 semester", "1 tahun"],
             correct: 1
         }
     ],
     even: [
         {
             text: "Berapa jumlah mata kuliah yang dipraktikumkan di prodi psikologi UII?",
-            options: ["3", "6", "5"],
+            options: ["3", "6", "5", "8"],
             correct: 1
         },
         {
             text: "Apa tugas utama asisten praktikum?",
-            options: ["Arahan sesuai modul", "Penilaian mandiri", "Menggantikan dosen"],
-            correct: 0
+            options: ["Arahan sesuai modul", "Penilaian mandiri", "Menggantikan dosen", "Membuat modul"],
+            correct: 1
         },
         {
             text: "Dalam melaksanakan praktikum, asisten praktikum harus:",
-            options: ["Membuat kebijakan akademik", "Arahan sesuai modul", "Menilai mandiri"],
+            options: ["Membuat kebijakan akademik", "Arahan sesuai modul", "Menilai mandiri", "Menilai objektif"],
             correct: 1
         }
     ]
